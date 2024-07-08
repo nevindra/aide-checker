@@ -1,0 +1,11 @@
+version: "1.0"
+
+services:
+  aide-dashboard:
+    image: docker.io/library/aide-dashboard
+    ports:
+      - "3000:3000"
+    environment:
+      GOOGLE_SERVICE_ACCOUNT_EMAIL: ${GOOGLE_SERVICE_ACCOUNT_EMAIL}
+      GOOGLE_PRIVATE_KEY: ${GOOGLE_PRIVATE_KEY}
+      SPREADSHEET_ID: ${SPREADSHEET_ID}
